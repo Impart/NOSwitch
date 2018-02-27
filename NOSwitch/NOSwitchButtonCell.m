@@ -306,7 +306,7 @@ float clampf(float value, float min_inclusive, float max_inclusive)
                     break;
                 case NSOffState:
                     fillColor = self.offTintColor;
-                    strokeColor = [NSColor colorWithCalibratedRed:0.8 green:0.8 blue:0.8 alpha:1];
+                    strokeColor = self.offTintColor;
                     break;
             }
         } else {

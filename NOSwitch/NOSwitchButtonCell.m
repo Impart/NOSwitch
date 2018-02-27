@@ -177,6 +177,8 @@ float clampf(float value, float min_inclusive, float max_inclusive)
     } else {
         self.tintColor = [NSColor colorWithCalibratedRed:76./255. green:217./255. blue:100./255. alpha:1.];
     }
+
+    self.offTintColor = [NSColor colorWithCalibratedRed:1. green:1. blue:1. alpha:0.];
     
     [self setBackgroundStateForCellState:self.state];
 }
@@ -303,7 +305,7 @@ float clampf(float value, float min_inclusive, float max_inclusive)
                     strokeColor = self.tintColor;
                     break;
                 case NSOffState:
-                    fillColor = [NSColor colorWithCalibratedRed:1. green:1. blue:1. alpha:0.];
+                    fillColor = self.offTintColor;
                     strokeColor = [NSColor colorWithCalibratedRed:0.8 green:0.8 blue:0.8 alpha:1];
                     break;
             }

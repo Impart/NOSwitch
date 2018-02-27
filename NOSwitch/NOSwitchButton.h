@@ -11,5 +11,6 @@
 @interface NOSwitchButton : NSButton
 
 @property (nonatomic, retain) NSColor *tintColor;
+@property (nonatomic, retain) NSColor *offTintColor;
 
 @end

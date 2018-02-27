@@ -104,4 +104,17 @@
     }
 }
 
+-(void)setOffTintColor:(NSColor *)offTintColor {
+    if ([self.offTintColor isEqual:offTintColor]) {
+        return;
+    }
+
+    _offTintColor = offTintColor;
+
+    if (self.cell && [self.cell isKindOfClass:[NOSwitchButtonCell class]]) {
+        NOSwitchButtonCell *cell = self.cell;
+        cell.offTintColor = _offTintColor;
+    }
+}
+
 @end
